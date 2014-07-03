@@ -443,11 +443,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"/Users/beatz/projects/BKON/basic-sdk-ios",
-					/Users/beatz/projects/BKON/BKON,
-					Basic,
-					SDK,
-					iOS,
+					"$(PROJECT_DIR)/..",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Basic-SDK/Basic SDK-Prefix.pch";
@@ -469,11 +465,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"/Users/beatz/projects/BKON/basic-sdk-ios",
-					/Users/beatz/projects/BKON/BKON,
-					Basic,
-					SDK,
-					iOS,
+					"$(PROJECT_DIR)/..",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Basic-SDK/Basic SDK-Prefix.pch";
