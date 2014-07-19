@@ -10,16 +10,30 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "BKONCentralManager.h"
 
+/**
+ * List of attributes for a beacon. Returned by the delegate method
+ * 'didUpdateAttribute', reporting which attribute was updated
+ */
 typedef NS_ENUM(NSInteger, BKONAttribute) {
+	/// The update was not successful and returned an error.
 	BKONError = -1,
+	/// The advertising UUID value for the beacon was updated.
 	BKONUUID,
+	/// The advertising major value for the beacon was updated.
 	BKONMajor,
+	/// The advertising minor value for the beacon was updated.
 	BKONMinor,
+	/// The advertising rate for the beacon was updated.
 	BKONAdvertisingRate,
+	/// The transmission power for the beacon was updated.
 	BKONTxPower,
+	/// The identify value was updated and it is now possible to toggle the LED.
 	BKONIdentify,
+	/// The model number of the beacon was updated.
 	BKONModelNumber,
+	/// The hardware revision value for the beacon was updated.
 	BKONHardwareRevision,
+	/// The firmware revision value for the beacon was updated.
 	BKONFirmwareRevision
 };
 
