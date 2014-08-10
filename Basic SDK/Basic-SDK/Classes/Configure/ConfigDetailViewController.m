@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	_dirty = false;
 	_readMajor = false;
 	_readMinor = false;
 }
@@ -39,19 +38,15 @@
 - (void)writeNewSetting {
 	switch (self.writeSetting) {
 		case BeaconMajor:
-			_dirty = true;
 			[self.bp writeMajor:self.writeValue];
 			break;
 		case BeaconMinor:
-			_dirty = true;
 			[self.bp writeMinor:self.writeValue];
 			break;
 		case BeaconAdvRate:
-			_dirty = true;
 			[self.bp writeAdvertisingRate:self.writeValue];
 			break;
 		case BeaconTxPower:
-			_dirty = true;
 			[self.bp writeTxPower:self.writeValue];
 			break;
 			
@@ -61,12 +56,7 @@
 }
 
 - (IBAction)closeView:(id)sender {
-	if (_dirty) {
-		[self.bp writeReset];
-	}
-	else {
-		[self.bp.centralManager cancelCurrentPeripheral];
-	}
+	[self.bp writeReset];
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
